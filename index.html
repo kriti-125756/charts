@@ -1,0 +1,66 @@
+<!-- <script type="text/javascript" src="fusioncharts.js"></script>
+<script type="text/javascript" src="angular.min.js"></script>
+<script type="text/javascript" src="angular-fusioncharts.min.js"></script>
+<script type="text/javascript" >
+	 var app = angular.module("myApp", ["ng-fusioncharts"]);
+
+app.controller('MyController',['$scope', function($scope) {
+    $scope.myDataSource = {
+        chart: {
+            caption: "Harry's SuperMart",
+            subCaption: "Top 5 stores in last month by revenue",
+        },
+        data: [{
+                label: "Bakersfield Central",
+                value: "880000"
+            },
+            {
+                label: "Garden Groove harbour",
+                value: "730000"
+            },
+            {
+                label: "Los Angeles Topanga",
+                value: "590000"
+            },
+            {
+                label: "Compton-Rancho Dom",
+                value: "520000"
+            },
+            {
+                label: "Daly City Serramonte",
+                value: "330000"
+            }
+        ]
+    };
+
+    console.log(typeof($scope.myDataSource));
+
+    $scope.myDataSource = JSON.parse($scope.myDataSource);
+}]);
+</script>
+<div ng-app ="myApp">
+<div  ng-controller="MyController">
+    <div fusioncharts
+        width="600"
+        height="400"
+        type="column2d"
+        dataSource="{{myDataSource}}" >
+    </div>
+</div>
+</div> -->
+
+<script type="text/javascript" src="angular.min.js"></script>
+<script src="Chart.js"></script>
+<script src="angular-chart.js"></script>
+<script type="text/javascript">
+	angular.module('myModule', ['chart.js']).controller("DoughnutCtrl", function ($scope) {
+  $scope.labels = ["Download Sales", "In-Store Sales", "Mail-Order Sales"];
+  $scope.data = [300, 500, 100];
+});;
+</script>
+<div ng-app="myModule">
+<div ng-controller = "DoughnutCtrl"></div>
+<canvas id="doughnut" class="chart chart-doughnut"
+  chart-data="data" chart-labels="labels">
+</canvas> 
+</div>

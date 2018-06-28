@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Angular Chart.js</title>
+  
+  
+  
+
+      <link rel="stylesheet" href="css/styleChart.css">
+
+  
+</head>
+
+<body>
+
+  <body ng-app="App">
+  <div ng-controller="chartsCtrl as vt">
+    <div class="row">
+      <div class="col-sm-12">
+        <canvas chart-options="vt.chartLineOptions" id="line" class="chart chart-line" chart-data="vt.chartLineCharts" chart-labels="vt.chartLineLabels" chart-legend="true" chart-series="vt.chartLineSeries" chart-colours="vt.chartLineColours">
+        </canvas>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <canvas id="radar" class="chart chart-radar" chart-options="vt.chartRadarOptions" chart-colours="vt.chartRadarColours" chart-data="vt.chartRadarCharts" chart-labels="vt.chartRadarLabels">
+        </canvas>
+      </div>
+      <div class="col-sm-6">
+        <canvas id="pie" class="chart chart-pie" chart-options="vt.chartPieOptions" chart-data="vt.chartPieCharts" chart-colours="vt.chartPieColours" chart-labels="vt.chartPieLabels"></canvas>
+      </div>
+    </div>
+  </div>
+</body>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular-chart.js/0.8.8/angular-chart.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
